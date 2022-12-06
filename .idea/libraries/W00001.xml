@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="W00001">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Data/W00001/test_data_3.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Data/W00001/Corrupted file.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

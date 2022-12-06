@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome1",
+    "definitions": {
+        "Welcome1": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
+                },
+                "created_by": {
+                    "$ref": "#/definitions/CreatedBy"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
+                },
+                "updated_by": {
+                    "$ref": "#/definitions/CreatedBy"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "members": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/CreatedBy"
+                    }
+                },
+                "workflows": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Workflow"
+                    }
+                }
+            },
+            "required": [
+                "created_at",
+                "created_by",
+                "description",
+                "id",
+                "members",
+                "name",
+                "updated_at",
+                "updated_by",
+                "workflows"
+            ],
+            "title": "Welcome1"
+        },
+        "CreatedBy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "display_name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "display_name",
+                "email",
+                "id"
+            ],
+            "title": "CreatedBy"
+        },
+        "Workflow": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "code_name": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "display_name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "code_name",
+                "description",
+                "display_name",
+                "id"
+            ],
+            "title": "Workflow"
+        }
+    }
+}

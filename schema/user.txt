@@ -1,0 +1,90 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome9",
+    "definitions": {
+        "Welcome9": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "display_name": {
+                    "type": "string"
+                },
+                "groups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Group"
+                    }
+                },
+                "teams": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Team"
+                    }
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
+                }
+            },
+            "required": [
+                "created_at",
+                "display_name",
+                "email",
+                "groups",
+                "id",
+                "teams",
+                "updated_at"
+            ],
+            "title": "Welcome9"
+        },
+        "Group": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ],
+            "title": "Group"
+        },
+        "Team": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "description",
+                "id",
+                "name"
+            ],
+            "title": "Team"
+        }
+    }
+}
