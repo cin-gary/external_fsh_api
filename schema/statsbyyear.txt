@@ -1,0 +1,560 @@
+{
+    "type": "object",
+    "required": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "1": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "2": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "3": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "4": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "5": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "6": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "7": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "8": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "9": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "10": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "11": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "12": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "pipeline",
+                    "jobs_processed",
+                    "pages_processed",
+                    "license_usage"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "pipeline": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "code_name",
+                            "display_name"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "code_name": {
+                                "type": "string"
+                            },
+                            "display_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "jobs_processed": {
+                        "type": "integer"
+                    },
+                    "pages_processed": {
+                        "type": "integer"
+                    },
+                    "license_usage": {
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
+}

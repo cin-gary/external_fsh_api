@@ -1,0 +1,45 @@
+{
+    "type": "array",
+    "additionalItems": false,
+    "items": {
+        "type": "object",
+        "required": [
+            "pipeline",
+            "jobs_processed",
+            "pages_processed",
+            "license_usage"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "pipeline": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "code_name",
+                    "display_name"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "code_name": {
+                        "type": "string"
+                    },
+                    "display_name": {
+                        "type": "string"
+                    }
+                }
+            },
+            "jobs_processed": {
+                "type": "integer"
+            },
+            "pages_processed": {
+                "type": "integer"
+            },
+            "license_usage": {
+                "type": "integer"
+            }
+        }
+    }
+}

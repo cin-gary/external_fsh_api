@@ -1,0 +1,7 @@
+{
+    "type": "array",
+    "additionalItems": true,
+    "items": {
+        "type": "integer"
+    }
+}
