@@ -1,0 +1,7 @@
+﻿input,type
+/file/corrupted_file/png_broken.png,image/png
+/file/corrupted_file/tiff_broken.tif,image/tiff
+/file/corrupted_file/jpg_broken.jpg,image/jpeg
+/file/corrupted_file/jpg_broken01.jpg,image/jpeg
+/file/corrupted_file/pdf_broken.pdf,application/pdf
+/file/corrupted_file/rename_extension.pdf,application/pdf

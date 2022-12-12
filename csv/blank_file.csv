@@ -1,0 +1,6 @@
+﻿job_id,input,type
+20,/file/blank_file/blank tiff file.tiff,image/tiff
+21,/file/blank_file/blank-PDF.jpeg,image/jpeg
+22,/file/blank_file/blank jpg.jpg,image/jpg
+23,/file/blank_file/blank PDF.pdf,image/pdf
+24,/file/blank_file/blank tif.TIF,image/tiff
