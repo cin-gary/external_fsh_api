@@ -1,0 +1,101 @@
+{
+    "type": "object",
+    "required": [
+        "id",
+        "code_name",
+        "description",
+        "display_name",
+        "is_public",
+        "users",
+        "teams",
+        "version",
+        "created_at",
+        "updated_at",
+        "pipeline",
+        "target_fields"
+    ],
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "code_name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "display_name": {
+            "type": "string"
+        },
+        "is_public": {
+            "type": "boolean"
+        },
+        "users": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "email",
+                    "display_name"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "display_name": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "teams": {
+            "type": "array",
+            "additionalItems": false,
+            "items": {}
+        },
+        "version": {
+            "type": "integer"
+        },
+        "created_at": {
+            "type": "string"
+        },
+        "updated_at": {
+            "type": "string"
+        },
+        "pipeline": {
+            "type": "string"
+        },
+        "target_fields": {
+            "type": "array",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "required": [
+                    "order",
+                    "code_name",
+                    "description",
+                    "display_name"
+                ],
+                "properties": {
+                    "order": {
+                        "type": "integer"
+                    },
+                    "code_name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "display_name": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

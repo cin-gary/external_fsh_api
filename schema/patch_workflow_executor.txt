@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "required": [
+        "pipeline",
+        "target_fields",
+        "version"
+    ],
+    "properties": {
+        "pipeline": {
+            "type": "string"
+        },
+        "target_fields": {
+            "type": "array",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "required": [
+                    "display_name",
+                    "code_name",
+                    "description",
+                    "order"
+                ],
+                "properties": {
+                    "display_name": {
+                        "type": "string"
+                    },
+                    "code_name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "order": {
+                        "type": "integer"
+                    }
+                }
+            }
+        },
+        "version": {
+            "type": "integer"
+        }
+    }
+}

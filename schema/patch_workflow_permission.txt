@@ -1,0 +1,59 @@
+{
+    "type": "object",
+    "required": [
+        "id",
+        "is_public",
+        "users",
+        "teams"
+    ],
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "is_public": {
+            "type": "boolean"
+        },
+        "users": {
+            "type": "array",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "email",
+                    "display_name"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "display_name": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "teams": {
+            "type": "array",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "name"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
