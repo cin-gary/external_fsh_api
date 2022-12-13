@@ -11,13 +11,13 @@
       "type": "integer"
     },
     "next": {
-      "type": "null"
+      "type": ["string","null"]
     },
     "previous": {
-      "type": "null"
+      "type": ["string","null"]
     },
     "results": {
-      "type": "array",
+      "type": ["array","null"],
       "additionalItems": false,
       "items": {
         "type": "object",
@@ -45,13 +45,13 @@
             "type": "string"
           },
           "created_by": {
-            "type": "null"
+            "type": ["string","null"]
           },
           "updated_at": {
             "type": "string"
           },
           "updated_by": {
-            "type": "null"
+            "type": ["string","null"]
           },
           "version": {
             "type": "integer"
@@ -66,10 +66,10 @@
             "type": "string"
           },
           "target_fields": {
-            "type": "array",
+            "type": ["array","null"],
             "additionalItems": true,
             "items": {
-              "type": "object",
+              "type": ["object","null"],
               "required": [
                 "code_name",
                 "description",
@@ -124,7 +124,7 @@
                   "type": "string"
                 },
                 "target_fields": {
-                  "type": "array",
+                  "type": ["array","null"],
                   "additionalItems": false,
                   "items": {
                     "type": "object",

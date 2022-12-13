@@ -14,7 +14,7 @@
             "type": "string"
         },
         "previous": {
-            "type": "null"
+            "type": "string"
         },
         "results": {
             "type": "array",

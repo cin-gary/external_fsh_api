@@ -30,7 +30,7 @@
           </elementProp>
           <elementProp name="working_dir" elementType="Argument">
             <stringProp name="Argument.name">working_dir</stringProp>
-            <stringProp name="Argument.value">${__P(working_dir,D:/Cinnamon/Automation/FSH)}</stringProp>
+            <stringProp name="Argument.value">${__P(working_dir,D:/Cinnamon/Projects/10.FSH/prj_fsh_api_autotest)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="username" elementType="Argument">
@@ -3033,7 +3033,7 @@ group_ids.each { FileUtils.writeStringToFile(new File(&quot;D:\\Cinnamon\\Automa
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="-- Job--" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="-- Job--" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -7017,7 +7017,7 @@ group_ids.each { FileUtils.writeStringToFile(new File(&quot;D:\\Cinnamon\\Automa
           </collectionProp>
         </ModuleController>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get pipeline with paramter" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get pipeline without paramter" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -7073,7 +7073,7 @@ group_ids.each { FileUtils.writeStringToFile(new File(&quot;D:\\Cinnamon\\Automa
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get pipeline without paramter" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get pipeline with paramter" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="code_name" elementType="HTTPArgument">
@@ -7110,6 +7110,34 @@ group_ids.each { FileUtils.writeStringToFile(new File(&quot;D:\\Cinnamon\\Automa
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">id</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">offset</stringProp>
+              </elementProp>
+              <elementProp name="ordering" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">code_name</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">ordering</stringProp>
+              </elementProp>
+              <elementProp name="limit" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">3</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">limit</stringProp>
+              </elementProp>
+              <elementProp name="target_document" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">Medical Expense document</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">target_document</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
@@ -7849,9 +7877,85 @@ group_ids.each { FileUtils.writeStringToFile(new File(&quot;D:\\Cinnamon\\Automa
           </collectionProp>
         </ModuleController>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get workflow successfully" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get list workflow successfully" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${workflow_path}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Access token" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${token}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">5000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <org.apache.jmeter.assertions.JSONSchemaAssertion guiclass="org.apache.jmeter.assertions.gui.JSONSchemaAssertionGui" testclass="org.apache.jmeter.assertions.JSONSchemaAssertion" testname="JSON Schema Assertion" enabled="true">
+            <stringProp name="jsonschema_assertion_filename">${working_dir}/schema/workflow.txt</stringProp>
+          </org.apache.jmeter.assertions.JSONSchemaAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">true</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get list workflow successfully with paramenters" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="limit" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">2</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">limit</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">offset</stringProp>
+              </elementProp>
+              <elementProp name="ordering" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">code_name</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">ordering</stringProp>
+              </elementProp>
+              <elementProp name="search" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">Medical</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">search</stringProp>
+              </elementProp>
+            </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${server}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
@@ -7905,6 +8009,655 @@ group_ids.each { FileUtils.writeStringToFile(new File(&quot;D:\\Cinnamon\\Automa
           </collectionProp>
         </ModuleController>
         <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create workflow invalid pipeline" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;pipeline&quot;: &quot;dfghjk&quot;,&#xd;
+  &quot;code_name&quot;: &quot;${__time(/1000)}&quot;,&#xd;
+  &quot;display_name&quot;: &quot;API Health Check OCR&quot;,&#xd;
+  &quot;description&quot;: &quot;API test workflow for Health Check OCR&quot;,&#xd;
+  &quot;is_public&quot;: false,&#xd;
+  &quot;users&quot;: [&#xd;
+   &quot;1&quot;&#xd;
+  ],&#xd;
+  &quot;target_fields&quot;: [&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Inspect Date&quot;,&#xd;
+      &quot;code_name&quot;: &quot;inspect_date&quot;,&#xd;
+      &quot;description&quot;: &quot;datetime&quot;,&#xd;
+      &quot;order&quot;: 0&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Hospital Name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;hospital_name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 8&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Doctor Name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;doctor_name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 9&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Patient name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 1&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Height (cm)&quot;,&#xd;
+      &quot;code_name&quot;: &quot;height&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 2&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Weight (kg)&quot;,&#xd;
+      &quot;code_name&quot;: &quot;weight&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 3&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Blood Pressure&quot;,&#xd;
+      &quot;code_name&quot;: &quot;bp_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 4&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;GOT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;got_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 5&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;ACT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;act_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 6&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;GPT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;gpt_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 7&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/v1/workflows/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Access token" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${token}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">5000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="51508">400</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">true</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.pipeline.[*]</stringProp>
+            <stringProp name="EXPECTED_VALUE">&quot;“dfghjk” is not a valid UUID.&quot;
+</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create workflow missing  pipeline" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;code_name&quot;: &quot;${__time(/1000)}&quot;,&#xd;
+  &quot;display_name&quot;: &quot;API Health Check OCR&quot;,&#xd;
+  &quot;description&quot;: &quot;API test workflow for Health Check OCR&quot;,&#xd;
+  &quot;is_public&quot;: false,&#xd;
+  &quot;users&quot;: [&#xd;
+   &quot;1&quot;&#xd;
+  ],&#xd;
+  &quot;target_fields&quot;: [&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Inspect Date&quot;,&#xd;
+      &quot;code_name&quot;: &quot;inspect_date&quot;,&#xd;
+      &quot;description&quot;: &quot;datetime&quot;,&#xd;
+      &quot;order&quot;: 0&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Hospital Name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;hospital_name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 8&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Doctor Name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;doctor_name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 9&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Patient name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 1&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Height (cm)&quot;,&#xd;
+      &quot;code_name&quot;: &quot;height&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 2&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Weight (kg)&quot;,&#xd;
+      &quot;code_name&quot;: &quot;weight&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 3&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Blood Pressure&quot;,&#xd;
+      &quot;code_name&quot;: &quot;bp_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 4&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;GOT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;got_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 5&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;ACT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;act_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 6&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;GPT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;gpt_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 7&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/v1/workflows/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Access token" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${token}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">5000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="51508">400</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">true</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.pipeline.[*]</stringProp>
+            <stringProp name="EXPECTED_VALUE">&quot;This field is required.&quot;
+</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create workflow missing  code_name" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;pipeline&quot;: &quot;62c95f0b-f34d-4a52-a8ba-3988f207daaf&quot;,&#xd;
+  &quot;display_name&quot;: &quot;API Health Check OCR&quot;,&#xd;
+  &quot;description&quot;: &quot;API test workflow for Health Check OCR&quot;,&#xd;
+  &quot;is_public&quot;: false,&#xd;
+  &quot;users&quot;: [&#xd;
+   &quot;1&quot;&#xd;
+  ],&#xd;
+  &quot;target_fields&quot;: [&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Inspect Date&quot;,&#xd;
+      &quot;code_name&quot;: &quot;inspect_date&quot;,&#xd;
+      &quot;description&quot;: &quot;datetime&quot;,&#xd;
+      &quot;order&quot;: 0&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Hospital Name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;hospital_name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 8&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Doctor Name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;doctor_name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 9&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Patient name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 1&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Height (cm)&quot;,&#xd;
+      &quot;code_name&quot;: &quot;height&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 2&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Weight (kg)&quot;,&#xd;
+      &quot;code_name&quot;: &quot;weight&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 3&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Blood Pressure&quot;,&#xd;
+      &quot;code_name&quot;: &quot;bp_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 4&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;GOT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;got_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 5&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;ACT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;act_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 6&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;GPT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;gpt_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 7&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/v1/workflows/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Access token" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${token}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">5000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="51508">400</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">true</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.code_name.[*]</stringProp>
+            <stringProp name="EXPECTED_VALUE">&quot;This field is required.&quot;
+</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create workflow missing  display_name" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;pipeline&quot;: &quot;62c95f0b-f34d-4a52-a8ba-3988f207daaf&quot;,&#xd;
+  &quot;code_name&quot;: &quot;${__time(/1000)}&quot;,&#xd;
+  &quot;description&quot;: &quot;API test workflow for Health Check OCR&quot;,&#xd;
+  &quot;is_public&quot;: false,&#xd;
+  &quot;users&quot;: [&#xd;
+   &quot;1&quot;&#xd;
+  ],&#xd;
+  &quot;target_fields&quot;: [&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Inspect Date&quot;,&#xd;
+      &quot;code_name&quot;: &quot;inspect_date&quot;,&#xd;
+      &quot;description&quot;: &quot;datetime&quot;,&#xd;
+      &quot;order&quot;: 0&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Hospital Name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;hospital_name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 8&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Doctor Name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;doctor_name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 9&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Patient name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 1&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Height (cm)&quot;,&#xd;
+      &quot;code_name&quot;: &quot;height&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 2&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Weight (kg)&quot;,&#xd;
+      &quot;code_name&quot;: &quot;weight&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 3&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Blood Pressure&quot;,&#xd;
+      &quot;code_name&quot;: &quot;bp_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 4&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;GOT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;got_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 5&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;ACT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;act_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 6&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;GPT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;gpt_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 7&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/v1/workflows/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Access token" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${token}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">5000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="51508">400</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">true</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.display_name.[*]</stringProp>
+            <stringProp name="EXPECTED_VALUE">&quot;This field is required.&quot;
+</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create workflow missing  user" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;pipeline&quot;: &quot;62c95f0b-f34d-4a52-a8ba-3988f207daaf&quot;,&#xd;
+  &quot;code_name&quot;: &quot;${__time(/1000)}&quot;,&#xd;
+  &quot;display_name&quot;: &quot;API Health Check OCR&quot;,&#xd;
+  &quot;description&quot;: &quot;API test workflow for Health Check OCR&quot;,&#xd;
+  &quot;is_public&quot;: false,&#xd;
+  &quot;target_fields&quot;: [&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Inspect Date&quot;,&#xd;
+      &quot;code_name&quot;: &quot;inspect_date&quot;,&#xd;
+      &quot;description&quot;: &quot;datetime&quot;,&#xd;
+      &quot;order&quot;: 0&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Hospital Name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;hospital_name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 8&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Doctor Name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;doctor_name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 9&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Patient name&quot;,&#xd;
+      &quot;code_name&quot;: &quot;name&quot;,&#xd;
+      &quot;description&quot;: &quot;text&quot;,&#xd;
+      &quot;order&quot;: 1&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Height (cm)&quot;,&#xd;
+      &quot;code_name&quot;: &quot;height&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 2&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Weight (kg)&quot;,&#xd;
+      &quot;code_name&quot;: &quot;weight&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 3&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;Blood Pressure&quot;,&#xd;
+      &quot;code_name&quot;: &quot;bp_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 4&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;GOT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;got_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 5&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;ACT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;act_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 6&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;display_name&quot;: &quot;GPT&quot;,&#xd;
+      &quot;code_name&quot;: &quot;gpt_index&quot;,&#xd;
+      &quot;description&quot;: &quot;number&quot;,&#xd;
+      &quot;order&quot;: 7&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/v1/workflows/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Access token" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${token}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">5000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="51508">400</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">true</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.non_field_errors.[*]</stringProp>
+            <stringProp name="EXPECTED_VALUE">&quot;At least one of is_public/users/teams fields must be specified.&quot;
+</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create workflow existed code_name" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -8330,15 +9083,13 @@ group_ids.each { FileUtils.writeStringToFile(new File(&quot;D:\\Cinnamon\\Automa
           </JSONPathAssertion>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Patch workflow executor" enabled="true"/>
-        <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Patch workflow executor" enabled="true">
-            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&#xd;
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Patch workflow executor" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
   &quot;pipeline&quot;: &quot;c21507aa-802f-4da3-b64a-9a29e86220f0&quot;,&#xd;
   &quot;target_fields&quot;: [&#xd;
     {&#xd;
@@ -8349,62 +9100,61 @@ group_ids.each { FileUtils.writeStringToFile(new File(&quot;D:\\Cinnamon\\Automa
     }&#xd;
   ]&#xd;
 }</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain">${server}</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">${workflow_path}${workflow_id}/executor/</stringProp>
-            <stringProp name="HTTPSampler.method">PATCH</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Access token" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Authorization</stringProp>
-                  <stringProp name="Header.value">Bearer ${token}</stringProp>
-                </elementProp>
-              </collectionProp>
-            </HeaderManager>
-            <hashTree/>
-            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-              <stringProp name="ConstantTimer.delay">5000</stringProp>
-            </ConstantTimer>
-            <hashTree/>
-            <org.apache.jmeter.assertions.JSONSchemaAssertion guiclass="org.apache.jmeter.assertions.gui.JSONSchemaAssertionGui" testclass="org.apache.jmeter.assertions.JSONSchemaAssertion" testname="JSON Schema Assertion" enabled="true">
-              <stringProp name="jsonschema_assertion_filename">${working_dir}/schema/patch_workflow_executor.txt</stringProp>
-            </org.apache.jmeter.assertions.JSONSchemaAssertion>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="49586">200</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-              <boolProp name="Assertion.assume_success">true</boolProp>
-              <intProp name="Assertion.test_type">8</intProp>
-            </ResponseAssertion>
-            <hashTree/>
-            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
-              <stringProp name="JSON_PATH">$.target_fields</stringProp>
-              <stringProp name="EXPECTED_VALUE">[{&quot;display_name&quot;: &quot;${new_workflow_displayname}&quot;,&quot;code_name&quot;: &quot;${new_workflow_executor_code_name}&quot;,&quot;description&quot;: &quot;${new_workflow_description}&quot;,&quot;order&quot;: ${new_workflow_executor_order}}]</stringProp>
-              <boolProp name="JSONVALIDATION">true</boolProp>
-              <boolProp name="EXPECT_NULL">false</boolProp>
-              <boolProp name="INVERT">false</boolProp>
-              <boolProp name="ISREGEX">false</boolProp>
-            </JSONPathAssertion>
-            <hashTree/>
-          </hashTree>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${workflow_path}${workflow_id}/executor/</stringProp>
+          <stringProp name="HTTPSampler.method">PATCH</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Access token" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${token}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">5000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <org.apache.jmeter.assertions.JSONSchemaAssertion guiclass="org.apache.jmeter.assertions.gui.JSONSchemaAssertionGui" testclass="org.apache.jmeter.assertions.JSONSchemaAssertion" testname="JSON Schema Assertion" enabled="true">
+            <stringProp name="jsonschema_assertion_filename">${working_dir}/schema/patch_workflow_executor.txt</stringProp>
+          </org.apache.jmeter.assertions.JSONSchemaAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">true</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.target_fields</stringProp>
+            <stringProp name="EXPECTED_VALUE">[{&quot;display_name&quot;: &quot;${new_workflow_displayname}&quot;,&quot;code_name&quot;: &quot;${new_workflow_executor_code_name}&quot;,&quot;description&quot;: &quot;${new_workflow_description}&quot;,&quot;order&quot;: ${new_workflow_executor_order}}]</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Patch workflow executor invalid id" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>

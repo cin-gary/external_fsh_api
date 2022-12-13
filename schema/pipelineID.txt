@@ -24,13 +24,13 @@
             "type": "string"
         },
         "created_by": {
-            "type": "null"
+            "type": ["string","null"]
         },
         "updated_at": {
             "type": "string"
         },
         "updated_by": {
-            "type": "null"
+            "type": ["string","null"]
         },
         "version": {
             "type": "integer"
@@ -45,7 +45,7 @@
             "type": "string"
         },
         "target_fields": {
-            "type": "array",
+            "type": ["array","null"],
             "additionalItems": false,
             "items": {
                 "type": "object",
@@ -103,7 +103,7 @@
                         "type": "string"
                     },
                     "target_fields": {
-                        "type": "array",
+                        "type": ["array","null"],
                         "additionalItems": false,
                         "items": {
                             "type": "object",
