@@ -9397,8 +9397,8 @@ group_ids.each { FileUtils.writeStringToFile(new File(&quot;D:\\Cinnamon\\Automa
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Upload File " enabled="true">
             <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
               <collectionProp name="HTTPFileArgs.files">
-                <elementProp name="D:\Cinnamon\Projects\10.FSH\prj_fsh_api_autotest\file\supported_file\PDF file\CAPE ACE V.4 SOF (ABBOT POINT).pdf" elementType="HTTPFileArg">
-                  <stringProp name="File.path">D:\Cinnamon\Projects\10.FSH\prj_fsh_api_autotest\file\supported_file\PDF file\CAPE ACE V.4 SOF (ABBOT POINT).pdf</stringProp>
+                <elementProp name="${working_dir}\file\supported_file\PDF file\CAPE ACE V.4 SOF (ABBOT POINT).pdf" elementType="HTTPFileArg">
+                  <stringProp name="File.path">${working_dir}\file\supported_file\PDF file\CAPE ACE V.4 SOF (ABBOT POINT).pdf</stringProp>
                   <stringProp name="File.paramname">file</stringProp>
                   <stringProp name="File.mimetype">application/pdf</stringProp>
                 </elementProp>
