@@ -51,7 +51,7 @@
                     "format": "uuid"
                 },
                 "result_updated_by": {
-                    "type": "null"
+						"$ref": "#/definitions/AtedBy"
                 },
                 "page_count": {
                     "type": "integer"
@@ -84,7 +84,7 @@
             "title": "Welcome4"
         },
         "AtedBy": {
-            "type": "object",
+            "type": ["object","null"],
             "additionalProperties": false,
             "properties": {
                 "id": {
