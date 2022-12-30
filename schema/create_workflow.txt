@@ -72,13 +72,12 @@
         },
         "target_fields": {
             "type": "array",
-            "additionalItems": false,
+            "additionalItems": true,
             "items": {
                 "type": "object",
                 "required": [
                     "order",
                     "code_name",
-                    "description",
                     "display_name"
                 ],
                 "properties": {
@@ -86,9 +85,6 @@
                         "type": "integer"
                     },
                     "code_name": {
-                        "type": "string"
-                    },
-                    "description": {
                         "type": "string"
                     },
                     "display_name": {

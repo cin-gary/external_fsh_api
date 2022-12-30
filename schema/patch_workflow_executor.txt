@@ -17,7 +17,6 @@
                 "required": [
                     "display_name",
                     "code_name",
-                    "description",
                     "order"
                 ],
                 "properties": {
@@ -25,9 +24,6 @@
                         "type": "string"
                     },
                     "code_name": {
-                        "type": "string"
-                    },
-                    "description": {
                         "type": "string"
                     },
                     "order": {

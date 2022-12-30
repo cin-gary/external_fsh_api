@@ -183,7 +183,7 @@
         },
         "TargetField": {
             "type": "object",
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
                 "order": {
                     "type": "integer"
@@ -191,29 +191,16 @@
                 "code_name": {
                     "type": "string"
                 },
-                "description": {
-                    "$ref": "#/definitions/Description"
-                },
                 "display_name": {
                     "type": "string"
                 }
             },
             "required": [
                 "code_name",
-                "description",
                 "display_name",
                 "order"
             ],
             "title": "TargetField"
-        },
-        "Description": {
-            "type": "string",
-            "enum": [
-                "datetime",
-                "text",
-                "number"
-            ],
-            "title": "Description"
         }
     }
 }
