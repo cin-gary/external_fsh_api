@@ -22,7 +22,7 @@
                     }
                 },
                 "teams": {
-                    "type": "array",
+                    "type": ["array","null"],
                     "items": {
                         "$ref": "#/definitions/Team"
                     }
@@ -65,7 +65,7 @@
             "title": "Group"
         },
         "Team": {
-            "type": "object",
+            "type": ["object","null"],
             "additionalProperties": false,
             "properties": {
                 "id": {

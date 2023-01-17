@@ -1,0 +1,131 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome2",
+    "definitions": {
+        "Welcome2": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "next": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "http"
+                    ]
+                },
+                "previous": {
+                    "type": "null"
+                },
+                "count": {
+                    "type": "integer"
+                },
+                "results": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Result"
+                    }
+                }
+            },
+            "required": [
+                "count",
+                "next",
+                "previous",
+                "results"
+            ],
+            "title": "Welcome2"
+        },
+        "Result": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "teams": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Team"
+                    }
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
+                },
+                "groups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Group"
+                    }
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "display_name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "created_at",
+                "display_name",
+                "email",
+                "groups",
+                "id",
+                "teams",
+                "updated_at"
+            ],
+            "title": "Result"
+        },
+        "Group": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/Name"
+                },
+                "id": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ],
+            "title": "Group"
+        },
+        "Team": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                }
+            },
+            "required": [
+                "description",
+                "id",
+                "name"
+            ],
+            "title": "Team"
+        },
+        "Name": {
+            "type": "string",
+            "enum": [
+                "User",
+                "Admin",
+                "System Admin"
+            ],
+            "title": "Name"
+        }
+    }
+}

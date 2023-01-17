@@ -11,10 +11,10 @@
             "type": "integer"
         },
         "next": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "previous": {
-            "type": "string"
+            "type": ["string", "null"]
         },
         "results": {
             "type": "array",
