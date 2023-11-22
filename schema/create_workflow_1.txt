@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "code_name": {
+      "type": "string"
+    },
+    "executor": {
+      "type": "object",
+      "properties": {
+        "pipeline": {
+          "type": "string"
+        },
+        "targets": {
+          "type": "object",
+          "properties": {
+            "additionalProp1": {
+              "type": "object",
+              "properties": {
+                "display_name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "display_name",
+                "description",
+                "type",
+                "order"
+              ]
+            }
+          }
+        }
+      },
+      "required": [
+        "pipeline",
+        "targets"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "exec_type": {
+      "type": "string"
+    },
+    "is_public": {
+      "type": "boolean"
+    },
+    "users": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "email": {
+              "type": "string"
+            },
+            "display_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "email",
+            "display_name"
+          ]
+        }
+      ]
+    },
+    "teams": {
+      "type": "array",
+      "items": {}
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "code_name",
+    "executor",
+    "description",
+    "display_name",
+    "exec_type",
+    "is_public",
+    "users",
+    "teams",
+    "created_at",
+    "updated_at"
+  ]
+}

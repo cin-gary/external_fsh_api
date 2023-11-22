@@ -1,97 +1,210 @@
 {
-    "type": "object",
-    "required": [
-        "id",
-        "code_name",
-        "description",
-        "display_name",
-        "is_public",
-        "users",
-        "teams",
-        "version",
-        "created_at",
-        "updated_at",
-        "pipeline",
-        "target_fields"
-    ],
-    "properties": {
-        "id": {
-            "type": "string"
-        },
-        "code_name": {
-            "type": "string"
-        },
-        "description": {
-            "type": "string"
-        },
-        "display_name": {
-            "type": "string"
-        },
-        "is_public": {
-            "type": "boolean"
-        },
-        "users": {
-            "type": "array",
-            "additionalItems": true,
-            "items": {
-                "type": "object",
-                "required": [
-                    "id",
-                    "email",
-                    "display_name"
-                ],
-                "properties": {
-                    "id": {
-                        "type": "integer"
-                    },
-                    "email": {
-                        "type": "string"
-                    },
-                    "display_name": {
-                        "type": "string"
-                    }
-                }
-            }
-        },
-        "teams": {
-            "type": "array",
-            "additionalItems": false,
-            "items": {}
-        },
-        "version": {
-            "type": "integer"
-        },
-        "created_at": {
-            "type": "string"
-        },
-        "updated_at": {
-            "type": "string"
-        },
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "code_name": {
+      "type": "string"
+    },
+    "executor": {
+      "type": "object",
+      "properties": {
         "pipeline": {
-            "type": "string"
+          "type": "string"
         },
-        "target_fields": {
-            "type": "array",
-            "additionalItems": true,
-            "items": {
-                "type": "object",
-                "required": [
-                    "order",
-                    "code_name",
-                    "display_name"
-                ],
-                "properties": {
-                    "order": {
-                        "type": "integer"
-                    },
-                    "code_name": {
-                        "type": "string"
-                    },
-                    "display_name": {
-                        "type": "string"
-                    }
+        "targets": {
+          "type": "object",
+          "properties": {
+            "height": {
+              "type": "object",
+              "properties": {
+                "display_name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "integer"
                 }
+              },
+              "required": [
+                "display_name",
+                "description",
+                "type",
+                "order"
+              ]
+            },
+            "body_weight": {
+              "type": "object",
+              "properties": {
+                "display_name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "display_name",
+                "description",
+                "type",
+                "order"
+              ]
+            },
+            "bmi": {
+              "type": "object",
+              "properties": {
+                "display_name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "display_name",
+                "description",
+                "type",
+                "order"
+              ]
+            },
+            "blood_pressure_max_1st": {
+              "type": "object",
+              "properties": {
+                "display_name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "display_name",
+                "description",
+                "type",
+                "order"
+              ]
+            },
+            "blood_pressure_min_1st": {
+              "type": "object",
+              "properties": {
+                "display_name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "display_name",
+                "description",
+                "type",
+                "order"
+              ]
             }
+          },
+          "required": [
+            "height",
+            "body_weight",
+            "bmi",
+            "blood_pressure_max_1st",
+            "blood_pressure_min_1st"
+          ]
         }
+      },
+      "required": [
+        "pipeline",
+        "targets"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "exec_type": {
+      "type": "string"
+    },
+    "is_public": {
+      "type": "boolean"
+    },
+    "users": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "email": {
+              "type": "string"
+            },
+            "display_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "email",
+            "display_name"
+          ]
+        }
+      ]
+    },
+    "teams": {
+      "type": "array",
+      "items": {}
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
     }
+  },
+  "required": [
+    "id",
+    "code_name",
+    "executor",
+    "description",
+    "display_name",
+    "exec_type",
+    "is_public",
+    "users",
+    "teams",
+    "created_at",
+    "updated_at"
+  ]
 }
