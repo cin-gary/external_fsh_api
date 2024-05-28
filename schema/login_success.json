@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "access": {
+      "type": "string",
+	  "minLength": 100
+    },
+    "refresh": {
+      "type": "string",
+	  "minLength": 100
+    }
+  },
+  "required": [
+    "access",
+    "refresh"
+  ]
+}
