@@ -1,90 +1,78 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Welcome9",
-    "definitions": {
-        "Welcome9": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "id": {
-                    "type": "integer"
-                },
-                "email": {
-                    "type": "string"
-                },
-                "display_name": {
-                    "type": "string"
-                },
-                "groups": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/Group"
-                    }
-                },
-                "teams": {
-                    "type": ["array","null"],
-                    "items": {
-                        "$ref": "#/definitions/Team"
-                    }
-                },
-                "created_at": {
-                    "type": "string",
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                },
-                "updated_at": {
-                    "type": "string",
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                }
-            },
-            "required": [
-                "created_at",
-                "display_name",
-                "email",
-                "groups",
-                "id",
-                "teams",
-                "updated_at"
-            ],
-            "title": "Welcome9"
+  "type": "object",
+  "required": [
+    "id",
+    "email",
+    "display_name",
+    "teams",
+    "created_at",
+    "updated_at",
+    "locale",
+    "groups"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "Team": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
         },
-        "Group": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "id": {
-                    "type": "integer"
-                },
-                "name": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id",
-                "name"
-            ],
-            "title": "Group"
+        "name": {
+          "type": "string"
         },
-        "Team": {
-            "type": ["object","null"],
-            "additionalProperties": false,
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "name": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "description",
-                "id",
-                "name"
-            ],
-            "title": "Team"
+        "description": {
+          "type": "string"
         }
+      },
+      "required": [
+        "description",
+        "id",
+        "name"
+      ],
+      "title": "Team"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "yyyy-MM-dd'T'HH:mm:ssZ"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "yyyy-MM-dd'T'HH:mm:ssZ"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      }
     }
+  }
 }
