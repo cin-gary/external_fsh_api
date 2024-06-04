@@ -1,206 +1,60 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Welcome1",
-    "definitions": {
-        "Welcome1": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "created_at": {
-                    "type": "string",
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                },
-                "created_by": {
-                    "$ref": "#/definitions/AtedBy"
-                },
-                "updated_at": {
-                    "type": "string",
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                },
-                "updated_by": {
-                    "$ref": "#/definitions/AtedBy"
-                },
-                "file_name": {
-                    "type": "string"
-                },
-                "page_count": {
-                    "type": "integer"
-                },
-                "status": {
-                    "type": "integer"
-                },
-                "metadata": {
-                    "type": "null"
-                },
-                "result_updated_at": {
-                    "type": "null"
-                },
-                "result_updated_by": {
-                    "type": "null"
-                },
-                "started_at": {
-                    "type": "null"
-                },
-                "finished_at": {
-                    "type": "null"
-                },
-                "input_file": {
-                    "$ref": "#/definitions/InputFile"
-                },
-                "workflow": {
-                    "$ref": "#/definitions/Workflow"
-                }
-            },
-            "required": [
-                "created_at",
-                "created_by",
-                "file_name",
-                "finished_at",
-                "id",
-                "input_file",
-                "metadata",
-                "page_count",
-                "result_updated_at",
-                "result_updated_by",
-                "started_at",
-                "status",
-                "updated_at",
-                "updated_by",
-                "workflow"
-            ],
-            "title": "Welcome1"
-        },
-        "AtedBy": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "id": {
-                    "type": "integer"
-                },
-                "email": {
-                    "type": "string"
-                },
-                "display_name": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "display_name",
-                "email",
-                "id"
-            ],
-            "title": "AtedBy"
-        },
-        "InputFile": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "created_at": {
-                    "type": "string",
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                },
-                "created_by": {
-                    "$ref": "#/definitions/AtedBy"
-                },
-                "updated_at": {
-                    "type": "string",
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                },
-                "updated_by": {
-                    "$ref": "#/definitions/AtedBy"
-                },
-                "file": {
-                    "type": "string",
-                    "format": "uri",
-                    "qt-uri-protocols": [
-                        "https"
-                    ]
-                },
-                "file_name": {
-                    "type": "string"
-                },
-                "media_type": {
-                    "type": "string"
-                },
-                "size": {
-                    "type": "integer"
-                },
-                "uri": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "created_at",
-                "created_by",
-                "file",
-                "file_name",
-                "id",
-                "media_type",
-                "size",
-                "updated_at",
-                "updated_by",
-                "uri"
-            ],
-            "title": "InputFile"
-        },
-        "Workflow": {
-            "type": ["object","null"],
-            "additionalProperties": true,
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "code_name": {
-                    "type": "string",
-                    "format": "integer"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "display_name": {
-                    "type": "string"
-                },
-                "target_fields": {
-                    "type": ["array","null"],
-                    "items": {
-                        "$ref": "#/definitions/TargetField"
-                    }
-                },
-                "version": {
-                    "type": ["integer","null"]
-                }
-            },
-            "title": "Workflow"
-        },
-        "TargetField": {
-            "type": "object",
-            "additionalProperties": true,
-            "properties": {
-                "order": {
-                    "type": "integer"
-                },
-                "code_name": {
-                    "type": "string"
-                },
-                "display_name": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "code_name",
-                "display_name",
-                "order"
-            ],
-            "title": "TargetField"
-        }
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "exec_type": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "page_count": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "integer"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "created_by": {
+      "type": "integer"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "updated_by": {
+      "type": "integer"
+    },
+    "started_at": {
+      "type": "null"
+    },
+    "finished_at": {
+      "type": "null"
+    },
+    "result_updated_at": {
+      "type": "null"
+    },
+    "result_updated_by": {
+      "type": "null"
     }
+  },
+  "required": [
+    "id",
+    "exec_type",
+    "file_name",
+    "page_count",
+    "status",
+    "created_at",
+    "created_by",
+    "updated_at",
+    "updated_by",
+    "started_at",
+    "finished_at",
+    "result_updated_at",
+    "result_updated_by"
+  ]
 }

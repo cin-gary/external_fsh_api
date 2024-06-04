@@ -1,215 +1,135 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Welcome5",
-    "definitions": {
-        "Welcome5": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "code_name": {
-                    "type": "string"
-                },
-                "display_name": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "target_document": {
-                    "type": "string"
-                },
-                "meta": {
-                    "type": ["object","null"]
-                },
-                "version": {
-                    "type": "string"
-                },
-                "build_type": {
-                    "type": "string"
-                },
-                "exec_type": {
-                    "type": "string"
-                },
-                "form_type": {
-                    "type": "string"
-                },
-                "targets": {
-                    "type": "object",
-                    "additionalProperties": {
-                        "$ref": "#/definitions/Target"
-                    }
-                },
-                "enable_single_field_extraction": {
-                    "type": "boolean"
-                },
-                "enable_table_field_extraction": {
-                    "type": "boolean"
-                },
-                "workflows": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/Workflow"
-                    }
-                },
-                "status": {
-                    "type": "string"
-                },
-                "created_at": {
-                    "type": "string"
-                },
-                "created_by": {
-            	    "type": ["string","null"]
-                },
-                "updated_at": {
-                    "type": "string"
-                },
-                "updated_by": {
-            	    "type": ["string","null"]
-                },
-                "versions": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/Version"
+    "type": "object",
+    "required": [
+        "id",
+        "created_at",
+        "created_by",
+        "updated_at",
+        "updated_by",
+        "version",
+        "type",
+        "target_document",
+        "code_name",
+        "target_fields",
+        "template",
+        "display_name",
+        "description",
+        "workflows"
+    ],
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "created_at": {
+            "type": "string"
+        },
+        "created_by": {
+            "type": ["string","null"]
+        },
+        "updated_at": {
+            "type": "string"
+        },
+        "updated_by": {
+            "type": ["string","null"]
+        },
+        "version": {
+            "type": "integer"
+        },
+        "type": {
+            "type": "string"
+        },
+        "target_document": {
+            "type": "string"
+        },
+        "code_name": {
+            "type": "string"
+        },
+        "target_fields": {
+            "type": ["array","null"],
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "required": [
+                    "code_name",
+                    "description",
+                    "display_name"
+                ],
+                "properties": {
+                    "code_name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "display_name": {
+                        "type": "string"
                     }
                 }
-            },
-            "required": [
-                "build_type",
-                "code_name",
-                "created_at",
-                "created_by",
-                "description",
-                "display_name",
-                "enable_single_field_extraction",
-                "enable_table_field_extraction",
-                "exec_type",
-                "form_type",
-                "id",
-                "meta",
-                "status",
-                "target_document",
-                "targets",
-                "updated_at",
-                "updated_by",
-                "version",
-                "versions",
-                "workflows"
-            ],
-            "title": "Welcome5"
+            }
         },
-        "Target": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "display_name": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "type": {
-                    "$ref": "#/definitions/Type"
-                },
-                "alternative_names": {
-                    "type": "null"
-                },
-                "copied_from": {
-                    "type": "null"
+        "template": {
+            "type": "object"
+        },
+        "display_name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "workflows": {
+            "type": "array",
+            "additionalItems": false,
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "code_name",
+                    "description",
+                    "display_name",
+                    "target_fields",
+                    "version"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "code_name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "display_name": {
+                        "type": "string"
+                    },
+                    "target_fields": {
+                        "type": ["array","null"],
+                        "additionalItems": false,
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "order",
+                                "code_name",
+                                "display_name"
+                            ],
+                            "properties": {
+                                "order": {
+                                    "type": "integer"
+                                },
+                                "code_name": {
+                                    "type": "string"
+                                },
+                                "display_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "version": {
+                        "type": "integer"
+                    }
                 }
-            },
-            "required": [
-                "alternative_names",
-                "copied_from",
-                "description",
-                "display_name",
-                "type"
-            ],
-            "title": "Target"
-        },
-        "Version": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "tag": {
-                    "type": "string",
-                    "format": "integer"
-                },
-                "current": {
-                    "type": "boolean"
-                },
-                "status": {
-                    "type": "string"
-                },
-                "created_at": {
-                    "type": "string"
-                },
-                "created_by": {
-                    "type": "null"
-                },
-                "updated_at": {
-                    "type": "string"
-                },
-                "updated_by": {
-                    "type": "null"
-                },
-                "published_at": {
-                    "type": "null"
-                },
-                "published_by": {
-                    "type": "null"
-                }
-            },
-            "required": [
-                "created_at",
-                "created_by",
-                "current",
-                "id",
-                "published_at",
-                "published_by",
-                "status",
-                "tag",
-                "updated_at",
-                "updated_by"
-            ],
-            "title": "Version"
-        },
-        "Workflow": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "code_name": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "display_name": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "code_name",
-                "description",
-                "display_name",
-                "id"
-            ],
-            "title": "Workflow"
-        },
-        "Type": {
-            "type": "string",
-            "title": "Type"
+            }
         }
     }
 }

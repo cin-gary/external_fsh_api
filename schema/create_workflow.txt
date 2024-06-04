@@ -132,7 +132,14 @@
                 "order"
               ]
             }
-          }
+          },
+          "required": [
+            "height",
+            "body_weight",
+            "bmi",
+            "blood_pressure_max_1st",
+            "blood_pressure_min_1st"
+          ]
         }
       },
       "required": [
