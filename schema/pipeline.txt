@@ -28,11 +28,8 @@
           "updated_at",
           "updated_by",
           "version",
-          "type",
           "target_document",
           "code_name",
-          "target_fields",
-          "template",
           "display_name",
           "description",
           "workflows"
@@ -45,16 +42,16 @@
             "type": "string"
           },
           "created_by": {
-            "type": ["string","null"]
+            "type": ["object","null"]
           },
           "updated_at": {
             "type": "string"
           },
           "updated_by": {
-            "type": ["string","null"]
+            "type": ["object","null"]
           },
           "version": {
-            "type": "integer"
+            "type": "string"
           },
           "type": {
             "type": "string"
@@ -63,7 +60,7 @@
             "type": "string"
           },
           "code_name": {
-            "type": "string"
+            "type": ["string", "null"]
           },
           "target_fields": {
             "type": ["array","null"],
@@ -106,9 +103,7 @@
                 "id",
                 "code_name",
                 "description",
-                "display_name",
-                "target_fields",
-                "version"
+                "display_name"
               ],
               "properties": {
                 "id": {
