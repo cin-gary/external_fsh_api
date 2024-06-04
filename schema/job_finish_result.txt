@@ -1,0 +1,2779 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "exec_type": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "page_count": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "integer"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "created_by": {
+      "type": "integer"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "updated_by": {
+      "type": "integer"
+    },
+    "started_at": {
+      "type": "null"
+    },
+    "finished_at": {
+      "type": "null"
+    },
+    "result_updated_at": {
+      "type": "null"
+    },
+    "result_updated_by": {
+      "type": "null"
+    },
+    "ai_error": {
+      "type": "null"
+    },
+    "result": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "null"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "null"
+            },
+            "top": {
+              "type": "null"
+            },
+            "width": {
+              "type": "null"
+            },
+            "height": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "integer"
+            },
+            "page_idx": {
+              "type": "integer"
+            },
+            "line_idx": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "field",
+            "value",
+            "confidence",
+            "page_idx",
+            "line_idx",
+            "left",
+            "top",
+            "width",
+            "height"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "exec_type",
+    "file_name",
+    "page_count",
+    "status",
+    "created_at",
+    "created_by",
+    "updated_at",
+    "updated_by",
+    "started_at",
+    "finished_at",
+    "result_updated_at",
+    "result_updated_by",
+    "ai_error",
+    "result"
+  ]
+}

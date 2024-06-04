@@ -1,342 +1,68 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Welcome4",
-    "definitions": {
-        "Welcome4": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "metadata": {
-                    "$ref": "#/definitions/Metadata"
-                },
-                "finished_at": {
-                    "type": ["string","null"],
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                },
-                "workflow": {
-                    "$ref": "#/definitions/Workflow"
-                },
-                "file_name": {
-                    "type": "string"
-                },
-                "created_at": {
-                    "type": "string",
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                },
-                "created_by": {
-                    "$ref": "#/definitions/AtedBy"
-                },
-                "result": {
-                    "type": ["null","object"],
-                    "additionalProperties": {
-                        "$ref": "#/definitions/Result"
-                    }
-                },
-                "input_file": {
-                    "$ref": "#/definitions/InputFile"
-                },
-                "updated_at": {
-                    "type": "string",
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                },
-                "updated_by": {
-                    "$ref": "#/definitions/AtedBy"
-                },
-                "started_at": {
-                    "type": ["string","null"],
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                },
-                "id": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "result_updated_by": {
-						"$ref": "#/definitions/AtedBy"
-                },
-                "page_count": {
-                    "type": "integer"
-                },
-                "status": {
-                    "type": "integer"
-                },
-                "result_updated_at": {
-                    "type": "null"
-                }
-            },
-            "required": [
-                "created_at",
-                "created_by",
-                "file_name",
-                "finished_at",
-                "id",
-                "input_file",
-                "metadata",
-                "page_count",
-                "result",
-                "result_updated_at",
-                "result_updated_by",
-                "started_at",
-                "status",
-                "updated_at",
-                "updated_by",
-                "workflow"
-            ],
-            "title": "Welcome4"
-        },
-        "AtedBy": {
-            "type": ["object","null"],
-            "additionalProperties": false,
-            "properties": {
-                "id": {
-                    "type": "integer"
-                },
-                "display_name": {
-                    "type": "string"
-                },
-                "email": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "display_name",
-                "email",
-                "id"
-            ],
-            "title": "AtedBy"
-        },
-        "InputFile": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "file": {
-                    "type": "string",
-                    "format": "uri",
-                    "qt-uri-protocols": [
-                        "https"
-                    ]
-                },
-                "updated_at": {
-                    "type": "string",
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                },
-                "size": {
-                    "type": "integer"
-                },
-                "media_type": {
-                    "type": "string"
-                },
-                "file_name": {
-                    "type": "string"
-                },
-                "updated_by": {
-                    "$ref": "#/definitions/AtedBy"
-                },
-                "created_at": {
-                    "type": "string",
-                    "format": "yyyy-MM-dd'T'HH:mm:ssZ"
-                },
-                "id": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "created_by": {
-                    "$ref": "#/definitions/AtedBy"
-                },
-                "uri": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "created_at",
-                "created_by",
-                "file",
-                "file_name",
-                "id",
-                "media_type",
-                "size",
-                "updated_at",
-                "updated_by",
-                "uri"
-            ],
-            "title": "InputFile"
-        },
-        "Metadata": {
-            "type": ["object","null"],
-            "additionalProperties": false,
-            "properties": {
-                "product_line": {
-                    "type": "string"
-                },
-                "version": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "product_line",
-                "version"
-            ],
-            "title": "Metadata"
-        },
-         "Result": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "page_idx": {
-                    "type": "integer"
-                },
-                "top": {
-                    "anyOf": [
-                        {
-                            "type": "integer"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ]
-                },
-                "field": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/Field"
-                    }
-                },
-                "left": {
-                    "anyOf": [
-                        {
-                            "type": "integer"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ]
-                },
-                "edited": {
-                    "type": "boolean"
-                },
-                "confidence": {
-                    "anyOf": [
-                        {
-                            "type": "number"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ]
-                },
-                "width": {
-                    "anyOf": [
-                        {
-                            "type": "integer"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ]
-                },
-                "value": {
-                    "anyOf": [
-                        {
-                            "type": "null"
-                        },
-                        {
-                            "type": "string"
-                        }
-                    ]
-                },
-                "height": {
-                    "anyOf": [
-                        {
-                            "type": "integer"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ]
-                }
-            },
-            "required": [
-                "confidence",
-                "edited",
-                "field",
-                "height",
-                "left",
-                "page_idx",
-                "top",
-                "value",
-                "width"
-            ],
-            "title": "Result"
-        },
-        "Workflow": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "target_fields": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/TargetField"
-                    }
-                },
-                "description": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "display_name": {
-                    "type": "string"
-                },
-                "code_name": {
-                    "type": "string",
-                    "format": "integer"
-                },
-                "version": {
-                    "type": "integer"
-                }
-            },
-            "required": [
-                "code_name",
-                "description",
-                "display_name",
-                "id",
-                "target_fields",
-                "version"
-            ],
-            "title": "Workflow"
-        },
-        "TargetField": {
-            "type": "object",
-            "additionalProperties": true,
-            "properties": {
-                "display_name": {
-                    "type": "string"
-                },
-                "code_name": {
-                    "type": "string"
-                },
-                "order": {
-                    "type": "integer"
-                }
-            },
-            "required": [
-                "code_name",
-                "display_name",
-                "order"
-            ],
-            "title": "TargetField"
-        },
-        "Field": {
-            "type": "string",
-            "enum": [
-                "start_date",
-                "item_text",
-                "hospital_name",
-                "end_date",
-                "issue_date",
-                "name_kanji"
-            ],
-            "title": "Field"
-        }
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "exec_type": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "page_count": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "integer"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "created_by": {
+      "type": "integer"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "updated_by": {
+      "type": "integer"
+    },
+    "started_at": {
+      "type": "null"
+    },
+    "finished_at": {
+      "type": "null"
+    },
+    "result_updated_at": {
+      "type": "null"
+    },
+    "result_updated_by": {
+      "type": "null"
+    },
+    "ai_error": {
+      "type": "null"
+    },
+    "result": {
+      "type": "null"
     }
+  },
+  "required": [
+    "id",
+    "exec_type",
+    "file_name",
+    "page_count",
+    "status",
+    "created_at",
+    "created_by",
+    "updated_at",
+    "updated_by",
+    "started_at",
+    "finished_at",
+    "result_updated_at",
+    "result_updated_by",
+    "ai_error",
+    "result"
+  ]
 }

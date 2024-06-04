@@ -1,0 +1,20 @@
+{
+  "id": "dd064920-59f1-4d08-a4d9-c4837adc9bed",
+  "exec_type": "ocr",
+  "file_name": "image_error.tif",
+  "page_count": 1,
+  "status": 9,
+  "created_at": "2024-06-04T17:38:11.928513+09:00",
+  "created_by": 1,
+  "updated_at": "2024-06-04T17:38:11.928534+09:00",
+  "updated_by": 1,
+  "started_at": null,
+  "finished_at": null,
+  "result_updated_at": null,
+  "result_updated_by": null,
+  "ai_error": {
+    "code": "E20002",
+    "message": "AI Pipeline internal error"
+  },
+  "result": null
+}
