@@ -29,11 +29,8 @@
                     "is_public",
                     "users",
                     "teams",
-                    "version",
                     "created_at",
-                    "updated_at",
-                    "pipeline",
-                    "target_fields"
+                    "updated_at"
                 ],
                 "properties": {
                     "id": {
