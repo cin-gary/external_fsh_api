@@ -6,87 +6,53 @@
     "previous",
     "results"
   ],
+  "additionalProperties": true,
   "properties": {
     "count": {
       "type": "integer"
     },
     "next": {
-      "type": ["string","null"]
+      "type": "string"
     },
     "previous": {
-      "type": ["string","null"]
+      "type": "null"
     },
     "results": {
-      "type": ["array","null"],
-      "additionalItems": false,
+      "type": "array",
+      "additionalItems": true,
       "items": {
         "type": "object",
         "required": [
           "id",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "version",
-          "target_document",
           "code_name",
           "display_name",
           "description",
-          "workflows"
+          "target_document",
+          "meta",
+          "version",
+          "build_type",
+          "exec_type",
+          "form_type",
+          "targets",
+          "enable_single_field_extraction",
+          "enable_table_field_extraction",
+          "workflows",
+          "status",
+          "created_at",
+          "created_by",
+          "updated_at",
+          "updated_by"
         ],
+        "additionalProperties": true,
         "properties": {
           "id": {
             "type": "string"
           },
-          "created_at": {
-            "type": "string"
-          },
-          "created_by": {
-            "type": ["object","null"]
-          },
-          "updated_at": {
-            "type": "string"
-          },
-          "updated_by": {
-            "type": ["object","null"]
-          },
-          "version": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "target_document": {
-            "type": "string"
-          },
           "code_name": {
-            "type": ["string", "null"]
-          },
-          "target_fields": {
-            "type": ["array","null"],
-            "additionalItems": true,
-            "items": {
-              "type": ["object","null"],
-              "required": [
-                "code_name",
-                "description",
-                "display_name"
-              ],
-              "properties": {
-                "code_name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "display_name": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "template": {
-            "type": "object"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "display_name": {
             "type": "string"
@@ -94,9 +60,102 @@
           "description": {
             "type": "string"
           },
+          "target_document": {
+            "type": "string"
+          },
+          "meta": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "post_processors": {
+                "type": "object",
+                "required": [
+                  "group_by"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                  "group_by": {
+                    "type": "array",
+                    "additionalItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "version": {
+            "type": "string"
+          },
+          "build_type": {
+            "type": "string"
+          },
+          "exec_type": {
+            "type": "string"
+          },
+          "form_type": {
+            "type": "string"
+          },
+          "targets": {
+            "type": "object",
+            "additionalItems": true,
+            "items": {
+              "type": "object",
+              "required": [
+                "display_name",
+                "description",
+                "type",
+                "alternative_names",
+                "copied_from"
+              ],
+              "additionalProperties": true,
+              "properties": {
+                "display_name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "description": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "type": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "alternative_names": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "copied_from": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            }
+          },
+          "enable_single_field_extraction": {
+            "type": "boolean"
+          },
+          "enable_table_field_extraction": {
+            "type": "boolean"
+          },
           "workflows": {
             "type": "array",
-            "additionalItems": false,
+            "additionalItems": true,
             "items": {
               "type": "object",
               "required": [
@@ -105,6 +164,7 @@
                 "description",
                 "display_name"
               ],
+              "additionalProperties": true,
               "properties": {
                 "id": {
                   "type": "string"
@@ -117,33 +177,62 @@
                 },
                 "display_name": {
                   "type": "string"
-                },
-                "target_fields": {
-                  "type": ["array","null"],
-                  "additionalItems": false,
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "order",
-                      "code_name",
-                      "display_name"
-                    ],
-                    "properties": {
-                      "order": {
-                        "type": "integer"
-                      },
-                      "code_name": {
-                        "type": "string"
-                      },
-                      "display_name": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                },
-                "version": {
-                  "type": "integer"
                 }
+              }
+            }
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "required": [
+              "id",
+              "email",
+              "display_name"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "email": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              }
+            }
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "required": [
+              "id",
+              "email",
+              "display_name"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "email": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
               }
             }
           }

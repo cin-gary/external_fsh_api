@@ -8,8 +8,6 @@
             "properties": {
                 "result": {
                     "type": "array",
-				"minItems": 3, 
-				"maxItems": 3, 
                     "items": {
                         "type": "string",
                         "format": "uri",
