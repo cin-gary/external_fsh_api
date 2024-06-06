@@ -1,12 +1,6 @@
 {
   "type": "object",
-  "required": [
-    "count",
-    "next",
-    "previous",
-    "results"
-  ],
-  "additionalProperties": true,
+ "additionalProperties": true,
   "properties": {
     "count": {
       "type": "integer"
