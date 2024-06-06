@@ -1,209 +1,208 @@
 {
-    "type": "object",
-    "required": [
-        "id",
-        "code_name",
-        "display_name",
-        "description",
-        "target_document",
-        "meta",
-        "version",
-        "build_type",
-        "exec_type",
-        "form_type",
-        "targets",
-        "enable_single_field_extraction",
-        "enable_table_field_extraction",
-        "workflows",
-        "status",
-        "created_at",
-        "created_by",
-        "updated_at",
-        "updated_by",
-        "versions"
-    ],
-    "additionalProperties": true,
-    "properties": {
-        "id": {
-            "type": "string"
-        },
-        "code_name": {
-            "type": "string"
-        },
-        "display_name": {
-            "type": "string"
-        },
-        "description": {
-            "type": "string"
-        },
-        "target_document": {
-            "type": "string"
-        },
-        "meta": {
-            "type": "object",
-            "required": [],
-            "additionalProperties": true,
-            "properties": {}
-        },
-        "version": {
-            "type": "string"
-        },
-        "build_type": {
-            "type": "string"
-        },
-        "exec_type": {
-            "type": "string"
-        },
-        "form_type": {
-            "type": "string"
-        },
-          "targets": {
-            "type": "object",
-            "additionalItems": true,
-            "items": {
-              "type": "object",
-              "required": [
-                "display_name",
-                "description",
-                "type",
-                "alternative_names",
-                "copied_from"
-              ],
-              "additionalProperties": true,
-              "properties": {
-                "display_name": {
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "description": {
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "type": {
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "alternative_names": {
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "copied_from": {
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                }
-              }
-            }
+  "type": "object",
+  "required": [
+    "id",
+    "code_name",
+    "display_name",
+    "description",
+    "target_document",
+    "meta",
+    "version",
+    "build_type",
+    "exec_type",
+    "form_type",
+    "targets",
+    "enable_single_field_extraction",
+    "enable_table_field_extraction",
+    "workflows",
+    "status",
+    "created_at",
+    "created_by",
+    "updated_at",
+    "updated_by",
+    "versions"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "code_name": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "target_document": {
+      "type": "string"
+    },
+    "meta": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "properties": {}
+    },
+    "version": {
+      "type": "string"
+    },
+    "build_type": {
+      "type": "string"
+    },
+    "exec_type": {
+      "type": "string"
+    },
+    "form_type": {
+      "type": "string"
+    },
+    "targets": {
+      "type": "object",
+      "additionalItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "display_name",
+          "description",
+          "type",
+          "alternative_names",
+          "copied_from"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "display_name": {
+            "type": [
+              "null",
+              "string"
+            ]
           },
-"able_single_field_extraction": {
-            "type": "boolean"
-        },
-        "enable_table_field_extraction": {
-            "type": "boolean"
-        },
-        "workflows": {
-            "type": "array",
-            "additionalItems": true,
-            "items": {
-                "type": "object",
-                "required": [
-                    "id",
-                    "code_name",
-                    "description",
-                    "display_name"
-                ],
-                "additionalProperties": true,
-                "properties": {
-                    "id": {
-                        "type": "string"
-                    },
-                    "code_name": {
-                        "type": "string"
-                    },
-                    "description": {
-                        "type": "string"
-                    },
-                    "display_name": {
-                        "type": "string"
-                    }
-                }
-            }
-        },
-        "status": {
-            "type": "string"
-        },
-        "created_at": {
-            "type": "string"
-        },
-        "created_by": {
-            "type": "null"
-        },
-        "updated_at": {
-            "type": "string"
-        },
-        "updated_by": {
-            "type": "null"
-        },
-        "versions": {
-            "type": "array",
-            "additionalItems": true,
-            "items": {
-                "type": "object",
-                "required": [
-                    "id",
-                    "tag",
-                    "current",
-                    "status",
-                    "created_at",
-                    "created_by",
-                    "updated_at",
-                    "updated_by",
-                    "published_at",
-                    "published_by"
-                ],
-                "additionalProperties": true,
-                "properties": {
-                    "id": {
-                        "type": "string"
-                    },
-                    "tag": {
-                        "type": "string"
-                    },
-                    "current": {
-                        "type": "boolean"
-                    },
-                    "status": {
-                        "type": "string"
-                    },
-                    "created_at": {
-                        "type": "string"
-                    },
-                    "created_by": {
-                        "type": "null"
-                    },
-                    "updated_at": {
-                        "type": "string"
-                    },
-                    "updated_by": {
-                        "type": "null"
-                    },
-                    "published_at": {
-                        "type": "null"
-                    },
-                    "published_by": {
-                        "type": "null"
-                    }
-                }
-            }
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "alternative_names": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "copied_from": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
         }
+      }
+    },
+    "able_single_field_extraction": {
+      "type": "boolean"
+    },
+    "enable_table_field_extraction": {
+      "type": "boolean"
+    },
+    "workflows": {
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "code_name",
+          "description",
+          "display_name"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "code_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "display_name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "created_by": {
+      "type": "null"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "updated_by": {
+      "type": "null"
+    },
+    "versions": {
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "tag",
+          "current",
+          "status",
+          "created_at",
+          "created_by",
+          "updated_at",
+          "updated_by",
+          "published_at",
+          "published_by"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string"
+          },
+          "current": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "null"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "null"
+          },
+          "published_at": {
+            "type": "null"
+          },
+          "published_by": {
+            "type": "null"
+          }
+        }
+      }
     }
+  }
 }
