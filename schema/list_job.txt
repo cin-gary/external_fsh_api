@@ -18,7 +18,10 @@
             ]
     },
     "previous": {
-      "type": "null"
+      "type": [
+              "null",
+              "string"
+            ]
     },
     "results": {
       "type": "array",
